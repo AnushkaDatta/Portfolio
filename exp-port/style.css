@@ -104,7 +104,7 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 60%;
-    font-size: 16px;
+    font-size: 28px;
 }
 
 .sub-title {
@@ -404,35 +404,47 @@ nav .fa {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url('Moblie.jpg');
+        background-image: url('moblie.png');
         background-size: cover;
         background-position: center;
         height: 100vh;
+        position: relative; /* Needed for absolute positioning inside */
     }
 
     .header-text {
         position: absolute;
-        top: 20%;
+        top: 0;
         left: 5%;
         right: 5%;
         width: 90%;
         max-width: 280px;
-        text-align: left;
+        padding-top: 10px; /* Gives spacing from very top */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align text to left */
+        justify-content: flex-start; /* Align to top */
         font-size: 20px;
         word-wrap: break-word;
     }
 
     .header-text h1 {
-        font-size: 22px;
+        font-size: 27px;
         margin: 0 0 10px 0;
     }
 
     .header-text p {
-        font-size: 16px;
+        font-size: 22px;
         margin: 0;
-        line-height: 1.4;
         max-width: 280px;
         word-wrap: break-word;
+    }
+    
+    .header-text p span{
+        font-size: 22px;
+    }
+
+    .header-text p i{
+        font-size: 20px;
     }
 
     nav .fa {
@@ -480,7 +492,27 @@ nav .fa {
     }
 
     .about-col-2 {
-        font-size: 14px;
+        font-size: 20px;
+    }
+
+    .contact-left p {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: nowrap;
+    }
+
+    .contact-left p a{
+         font-size: 20px;
+    }
+
+    .contact-left p .x{
+         font-size: 20px;
+    }
+
+
+    .contact-left a{
+        font-size: 20px;
     }
 
     .copyright {
